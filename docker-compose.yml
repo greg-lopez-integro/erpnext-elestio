@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
@@ -11,7 +11,7 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
 
   configurator:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: none
@@ -40,7 +40,7 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
 
   create-site:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: none
@@ -91,7 +91,7 @@ services:
       - db-data:/var/lib/mysql
 
   frontend:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
@@ -113,7 +113,7 @@ services:
       - "49.13.7.138:8990:8080"
 
   queue-default:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
@@ -127,7 +127,7 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
 
   queue-long:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
@@ -141,7 +141,7 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
 
   queue-short:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
@@ -179,7 +179,7 @@ services:
       - redis-socketio-data:/data
 
   scheduler:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
@@ -191,7 +191,7 @@ services:
       - ./logs:/home/frappe/frappe-bench/logs
 
   websocket:
-    image: greg-lopez-integro/erpnext
+    image: frappe/erpnext:latest
     deploy:
       restart_policy:
         condition: on-failure
