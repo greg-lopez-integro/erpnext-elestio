@@ -71,6 +71,7 @@ services:
         done;
         echo "sites/common_site_config.json found";
         bench new-site frontend --no-mariadb-socket --admin-password=${ADMIN_PASSWORD} --db-root-password=admin --install-app erpnext --set-default;
+        bench --site frontend install-app healthcare;
 
   db:
     image: mariadb:10.6
